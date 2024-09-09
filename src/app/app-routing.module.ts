@@ -7,14 +7,19 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AdminMessageComponent } from './admin-message/admin-message.component';
 import { HomeComponent } from './home/home.component';
 import { ConfirmBookingComponent } from './confirm-booking/confirm-booking.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from 'src/Guard/auth.guard';
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
-  {path: "mybookings", component:DisplayflightComponent},
-  {path: "bookings", component:BookflightComponent},
+  {path: "mybookings", component:DisplayflightComponent, canActivate:[AuthGuard]},
+  {path: "bookings", component:BookflightComponent, canActivate:[AuthGuard]},
   {path: "contactus", component:ContactusComponent},
   {path: "admin-panel", component:AdminMessageComponent},
-  {path: "confirmbookings/:bookingId", component:ConfirmBookingComponent}
+  {path: "confirmbookings/:bookingId", component:ConfirmBookingComponent},
+  {path: "login", component:LoginComponent},
+  {path: "signup", component:SignupComponent}
 ];
 
 @NgModule({
