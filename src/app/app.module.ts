@@ -12,8 +12,6 @@ import { AdminMessageComponent } from './admin-message/admin-message.component';
 import { HomeComponent } from './home/home.component';
 import {Fcity,Dcity} from './filter';
 import { ConfirmBookingComponent } from './confirm-booking/confirm-booking.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +25,6 @@ import { SignupComponent } from './signup/signup.component';
     Fcity,
     Dcity,
     ConfirmBookingComponent,
-    LoginComponent,
-    SignupComponent,
   ],
   imports: [
     BrowserModule,
